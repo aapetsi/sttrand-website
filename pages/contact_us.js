@@ -16,21 +16,23 @@ const Contact = () => {
     e.preventDefault()
   }
   return (
-    <div className='bg-deep-blue w=[1920px] h-[675px]'>
-      <div className='ml-[278px] flex'>
+    <div className='md:bg-deep-blue md:w-[1920px] md:h-[675px]'>
+      <div className='md:ml-[278px] md:flex'>
         <div className='flex mr-[153px] mt-[82px] flex-col'>
-          <h1 className='uppercase text-white font-black text-4xl tracking-wide'>
+          <h1 className='uppercase md:text-white font-black text-4xl tracking-wide'>
             Contact us
           </h1>
-          <p className='text-white'>Lorem ipsum dolor sit amet</p>
-          <p className='text-white'>Let&apos;s Talk!</p>
+          <p className='md:text-white invisible md:visible'>
+            Lorem ipsum dolor sit amet
+          </p>
+          <p className='md:text-white invisible md:visible'>Let&apos;s Talk!</p>
         </div>
         <form onSubmit={handleSubmit}>
-          <div className='bg-white mt-[82px] w-[757px] h-[511px] rounded-3xl p-14'>
-            <div className='flex justify-between mb-10'>
+          <div className='bg-white md:mt-[82px] md:w-[757px] md:h-[511px] rounded-3xl md:p-14 p-3'>
+            <div className='md:flex md:justify-between md:mb-10'>
               <input
                 placeholder='First name'
-                className='bg-[#F8F8F8] rounded-lg p-5 w-[289px] h-[50px]'
+                className='bg-[#F8F8F8] rounded-lg md:p-5 md:w-[289px] md:h-[50px] h-10 p-4 mb-2 w-full'
                 onChange={handleChange}
                 value={userData.firstName}
                 required
@@ -42,18 +44,18 @@ const Contact = () => {
                 value={userData.lastName}
                 required
                 name='lastName'
-                className='bg-[#F8F8F8] rounded-lg p-5 w-[289px] h-[50px]'
+                className='bg-[#F8F8F8] rounded-lg md:p-5 md:w-[289px] md:h-[50px] h-10 p-4 w-full mb-2'
               />
             </div>
 
-            <div className='flex justify-between mb-10'>
+            <div className='md:flex md:justify-between md:mb-10'>
               <input
                 placeholder='Phone Number'
                 onChange={handleChange}
                 value={userData.phoneNumber}
                 name='phoneNumber'
                 required
-                className='bg-[#F8F8F8] rounded-lg p-5 w-[289px] h-[50px]'
+                className='bg-[#F8F8F8] rounded-lg md:p-5 md:w-[289px] md:h-[50px] h-10 p-4 mb-2 w-full'
               />
               <input
                 placeholder='Email'
@@ -61,7 +63,7 @@ const Contact = () => {
                 name='email'
                 type='email'
                 required
-                className='bg-[#F8F8F8] rounded-lg p-5 w-[289px] h-[50px]'
+                className='bg-[#F8F8F8] rounded-lg md:p-5 md:w-[289px] md:h-[50px] h-10 p-4 mb-2 w-full'
               />
             </div>
 
@@ -75,7 +77,7 @@ const Contact = () => {
 
             <button
               type='submit'
-              className='inline-block text-sm px-4 py-2 leading-none bg-deep-blue border rounded-lg text-white border-white hover:border-transparent   mt-4 lg:mt-0'
+              className='inline-block text-sm px-4 py-2 leading-none bg-deep-blue border rounded-lg text-white border-white hover:border-transparent md:mt-4 lg:mt-0'
             >
               Submit
             </button>
