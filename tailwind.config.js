@@ -16,6 +16,7 @@ module.exports = {
       colors: {
         'deep-blue': '#0e203f',
         'light-blue': '#8FDFFA',
+        'off-white': '#F8F8F8',
       },
       fontFamily: {
         sans: ['Montserrat', ...defaultTheme.fontFamily.sans],

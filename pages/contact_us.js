@@ -16,8 +16,71 @@ const Contact = () => {
     e.preventDefault()
   }
   return (
-    <div className='md:bg-deep-blue md:w-[1920px] md:h-[675px]'>
-      <div className='md:ml-[278px] md:flex'>
+    <div className='bg-deep-blue mb-10'>
+      <div className='flex text-center font-black flex-col'>
+        <h1 className='mb-2 text-white mt-10'>CONTACT US</h1>
+        <p className='mb-2 text-white material-symbols-outlined'>home</p>
+        <p className='text-white font-extralight w-2/3 mx-auto mb-4'>
+          Send us a message and we will respond as soon as possible
+        </p>
+        <div className='bg-white w-10/12 mx-auto rounded-lg mb-32'>
+          <form className='mt-10 mb-10' onSubmit={handleSubmit}>
+            <input
+              placeholder='First name'
+              className='bg-off-white rounded-lg h-9 p-4 mb-5 w-10/12 font-extralight text-sm'
+              onChange={handleChange}
+              value={userData.firstName}
+              required
+              name='firstName'
+            />
+
+            <input
+              placeholder='Last Name'
+              onChange={handleChange}
+              value={userData.lastName}
+              required
+              name='lastName'
+              className='bg-off-white rounded-lg h-9 p-4 mb-5 w-10/12 font-extralight text-sm'
+            />
+
+            <input
+              placeholder='Phone Number'
+              onChange={handleChange}
+              value={userData.phoneNumber}
+              name='phoneNumber'
+              required
+              className='bg-off-white rounded-lg h-9 p-4 mb-5 w-10/12 font-extralight text-sm'
+            />
+
+            <input
+              placeholder='Email'
+              onChange={handleChange}
+              name='email'
+              type='email'
+              required
+              className='bg-off-white rounded-lg h-9 p-4 mb-5 w-10/12 font-extralight text-sm'
+            />
+
+            <textarea
+              placeholder='Message'
+              onChange={handleChange}
+              name='message'
+              required
+              className='bg-off-white rounded-lg h-40 p-4 mb-5 w-10/12 font-extralight text-sm resize-none'
+            />
+
+            <button
+              type='submit'
+              className='flex ml-7 text-sm px-4 py-2 leading-none bg-deep-blue border rounded-full text-white font-extralight border-white hover:border-transparent'
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+
+      {/* <div */}
+      {/* <div className='md:ml-[278px] md:flex'>
         <div className='flex mr-[153px] mt-[82px] flex-col'>
           <h1 className='uppercase md:text-white font-black text-4xl tracking-wide'>
             Contact us
@@ -83,7 +146,7 @@ const Contact = () => {
             </button>
           </div>
         </form>
-      </div>
+      </div> */}
     </div>
   )
 }
