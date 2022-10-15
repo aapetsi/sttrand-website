@@ -4,6 +4,8 @@ import analytics from '../images/Group 5562@2x.png'
 import imageOne from '../images/image1.png'
 import imageTwo from '../images/image2.png'
 import imageThree from '../images/image3.png'
+import appStore from '../images/appstore.png'
+import googlePlayStore from '../images/googlePlayStore.png'
 import homeImage from '../images/Image 3.png'
 import products from '../images/Screen Shot 2022-07-13 at 11.02.15 PM@2x.png'
 import pathSvg from '../images/Path 5476.svg'
@@ -12,8 +14,8 @@ import pathSvg from '../images/Path 5476.svg'
 const AppStoreSvgComponent = (props) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
-    width={228.358}
-    height={65.515}
+    width={props.width ? props.width : 228.358}
+    height={props.height ? props.height : 65.515}
     {...props}
   >
     <path
@@ -50,8 +52,8 @@ const AppStoreSvgComponent = (props) => (
 const PlayStoreSvgComponent = (props) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
-    width={221.115}
-    height={65.516}
+    width={props.width ? props.width : 221.115}
+    height={props.height ? props.height : 65.516}
     {...props}
   >
     <defs>
@@ -173,22 +175,53 @@ const PlayStoreSvgComponent = (props) => (
 export default function Home() {
   return (
     <div>
+      <h1 className='text-center font-bold mb-3'>
+        <span className='text-light-blue'>Buy</span> together,
+        <br /> Save together
+      </h1>
+      <p className='text-center text-sm w-2/3 mx-auto mb-6'>
+        Realizing the power of community. Sttrand is the social commerce
+        infrastructure for the continent of Africa.
+      </p>
+
+      <div className='flex justify-between w-2/3 mx-auto mb-6'>
+        <div className='w-32'>
+          <Image src={appStore} alt='apple store image' />
+        </div>
+
+        <div className='w-32'>
+          <Image src={googlePlayStore} alt='google play store image' />
+        </div>
+      </div>
+
+      <div className="">
+        <div className='bg-deep-blue rounded-full w-8 h-8 absolute top-[50%] ml-5'></div>
+        <div className="bg-deep-blue ml-5 rounded-full w-[350px] h-[350px] absolute top-[60%]"></div>
+        <div className='text-center'>
+          <Image src={homeImage} alt='sttrand app home page' />
+        </div>
+      </div>
+
       <div>
-        <h1 className='text-center font-bold mb-3'>Different Payment<br /> Options Accepted</h1>
-        <p className="text-center text-xs mb-10">Different Delivery Options Available</p>
+        <h1 className='text-center font-bold mb-3'>
+          Different Payment
+          <br /> Options Accepted
+        </h1>
+        <p className='text-center text-xs mb-10'>
+          Different Delivery Options Available
+        </p>
         <div className='flex justify-between p-3 mb-6'>
           <span className='w-32'>
             <Image src={imageOne} alt='shopping cart items' />
           </span>
           <span className='-mt-8 w-32'>
-            <Image src={imageTwo} alt='items checkout'/>
+            <Image src={imageTwo} alt='items checkout' />
           </span>
           <span className='w-32'>
             <Image src={imageThree} alt='successful order' />
           </span>
         </div>
       </div>
-
 
       <div className='bg-deep-blue'>
         <h1 className='text-center text-white font-semibold mb-6'>
@@ -198,11 +231,11 @@ export default function Home() {
           <p>Learn more</p>
         </div>
 
-        <div className="w-11/12 mx-auto mb-6">
+        <div className='w-11/12 mx-auto mb-6'>
           <Image src={analytics} alt='analytics' />
         </div>
 
-        <div className="w-11/12 mx-auto mb-8">
+        <div className='w-11/12 mx-auto mb-8'>
           <Image src={products} alt='products' />
         </div>
 
@@ -218,15 +251,7 @@ export default function Home() {
             Realizing the power of community. Sttrand is the social commerce
             infrastructure for the continent of Africa
           </p>
-          <div className='flex justify-between'>
-            <span>
-              <AppStoreSvgComponent />
-            </span>
 
-            <span>
-              <PlayStoreSvgComponent />
-            </span>
-          </div>
         </div>
         <Image src={homeImage} />
       </div>
