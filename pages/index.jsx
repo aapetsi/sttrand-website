@@ -5,6 +5,11 @@ import imageOne from '../images/image1.png'
 import imageTwo from '../images/image2.png'
 import imageThree from '../images/image3.png'
 import appStore from '../images/appstore.png'
+import imagex1 from '../images/imagex1.png'
+import imagex2 from '../images/imagex2.png'
+import imagex3 from '../images/imagex3.png'
+import imagex4 from '../images/imagex4.png'
+import imagex5 from '../images/imagex5.png'
 import googlePlayStore from '../images/googlePlayStore.png'
 import homeImage from '../images/Image 3.png'
 import products from '../images/Screen Shot 2022-07-13 at 11.02.15 PM@2x.png'
@@ -47,12 +52,22 @@ export default function Home() {
         <p className='text-white font-black text-sm'>Get the App</p>
       </div>
 
-      <div>
-        <div className="">image 1</div>
-        <div className="">image 2</div>
-        <div className="">image 3</div>
-        <div className="">image 4</div>
-        <div className="">image 5</div>
+      <div className='flex flex-wrap justify-center'>
+        <div className="w-5/12">
+          <Image src={imagex1} />
+        </div>
+        <div className="w-5/12">
+          <Image src={imagex2} />
+        </div>
+        <div className="w-5/12">
+          <Image src={imagex3} />
+          </div>
+        <div className="w-5/12">
+          <Image src={imagex4} />
+        </div>
+        <div className="w-5/12">
+          <Image src={imagex5} />
+        </div>
       </div>
 
       <div>
