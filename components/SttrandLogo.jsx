@@ -1,8 +1,9 @@
 const SttrandLogo = (props) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
-    viewBox='0 0 475.95 107.45'
-    {...props}
+    // viewBox='0 0 475.95 107.45'
+    viewBox={props.viewBox ? props.viewBox : '0 0 475.95 107.45'}
+    // {...props}
   >
     <defs>
       <style>{'.cls-1{fill:#0e203f}'}</style>
