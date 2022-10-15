@@ -1,9 +1,9 @@
-const SvgComponent = (props) => (
+const Africa = (props) => (
   <svg
     data-name='Group 5531'
     xmlns='http://www.w3.org/2000/svg'
-    width={558.215}
-    height={562}
+    width={props.width ? props.width : 558.215}
+    height={props.height ? props.height : 562}
     viewBox='0 0 558.215 562'
     {...props}
   >
@@ -1548,4 +1548,4 @@ const SvgComponent = (props) => (
   </svg>
 )
 
-export default SvgComponent
+export default Africa
