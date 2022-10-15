@@ -48,6 +48,14 @@ export default function Home() {
       </div>
 
       <div>
+        <div className="">image 1</div>
+        <div className="">image 2</div>
+        <div className="">image 3</div>
+        <div className="">image 4</div>
+        <div className="">image 5</div>
+      </div>
+
+      <div>
         <h1 className='text-center font-bold mb-3'>
           Different Payment
           <br /> Options Accepted
