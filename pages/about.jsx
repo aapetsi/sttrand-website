@@ -67,7 +67,7 @@ function CartIconSvgComponent(props) {
 const About = () => {
   return (
     <div>
-      <div className='ml-[200px]'>
+      {/* <div className='ml-[200px]'>
         <div className='flex justify-between mt-12'>
           <div className='w-[607px] mt-24'>
             <h1 className='text-6xl font-black tracking-wide'>About us</h1>
@@ -177,7 +177,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
