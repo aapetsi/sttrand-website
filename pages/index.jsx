@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import analytics from '../images/Group 5562@2x.png'
-import imageOne from '../images/Group 5571.png'
+import imageOne from '../images/image1.png'
+import imageTwo from '../images/image2.png'
+import imageThree from '../images/image3.png'
 import homeImage from '../images/Image 3.png'
 import products from '../images/Screen Shot 2022-07-13 at 11.02.15 PM@2x.png'
 import pathSvg from '../images/Path 5476.svg'
@@ -171,6 +173,23 @@ const PlayStoreSvgComponent = (props) => (
 export default function Home() {
   return (
     <div>
+      <div>
+        <h1 className='text-center font-bold mb-3'>Different Payment<br /> Options Accepted</h1>
+        <p className="text-center text-xs mb-10">Different Delivery Options Available</p>
+        <div className='flex justify-between p-3 mb-6'>
+          <span className='w-32'>
+            <Image src={imageOne} alt='shopping cart items' />
+          </span>
+          <span className='-mt-8 w-32'>
+            <Image src={imageTwo} alt='items checkout'/>
+          </span>
+          <span className='w-32'>
+            <Image src={imageThree} alt='successful order' />
+          </span>
+        </div>
+      </div>
+
+
       <div className='bg-deep-blue'>
         <h1 className='text-center text-white font-semibold mb-6'>
           Become a Merchant
