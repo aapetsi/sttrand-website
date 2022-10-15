@@ -64,13 +64,13 @@ export default function Home() {
         <div className='w-5/12 p-4'>
           <Image src={imagex1} alt='' />
         </div>
-        <div className='w-5/12 p-4'>
+        <div className='w-5/12 p-4 mt-10'>
           <Image src={imagex2} alt='' />
         </div>
-        <div className='w-5/12 p-4'>
+        <div className='w-5/12 p-4 -mt-5'>
           <Image src={imagex3} alt='' />
         </div>
-        <div className='w-5/12 p-4'>
+        <div className='w-5/12 p-4 mt-5'>
           <Image src={imagex4} alt='' />
         </div>
         <div className='w-5/12 p-4'>
