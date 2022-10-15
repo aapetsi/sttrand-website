@@ -194,12 +194,19 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="">
-        <div className='bg-deep-blue rounded-full w-8 h-8 absolute top-[50%] ml-5'></div>
+      <div className='mb-12'>
+        <div className='bg-deep-blue rounded-full w-8 h-8 absolute top-[55%] ml-5'></div>
         <div className="bg-deep-blue ml-5 rounded-full w-[350px] h-[350px] absolute top-[60%]"></div>
         <div className='text-center'>
           <Image src={homeImage} alt='sttrand app home page' />
         </div>
+      </div>
+
+      <h1 className='text-center font-semibold mb-3'>A Platform Where Consumers<br /> can Utilize Social Apps to buy items<br/> at a Discount</h1>
+      <p className='text-center w-2/3 mx-auto mb-3'>Consumers have the option to purchase everyday household items individually at a standard retail price or they can partner with a family/friend or other consumers on our platform to get a discounted price</p>
+
+      <div className='bg-deep-blue flex flex-col justify-center text-center w-28 mx-auto h-10 mb-8 rounded-2xl'>
+        <p className='text-white font-black text-sm'>Get the App</p>
       </div>
 
       <div>
