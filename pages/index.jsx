@@ -69,7 +69,7 @@ export default function Home() {
       </div>
 
       <div className='bg-deep-blue'>
-        <h1 className='text-center text-white font-semibold mb-6'>
+        <h1 className='text-center text-white font-semibold mb-6 pt-4'>
           Become a Merchant
         </h1>
         <div className='bg-white w-1/3 mx-auto rounded-lg h-10 flex flex-col justify-center text-center mb-6'>
