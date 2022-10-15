@@ -171,7 +171,25 @@ const PlayStoreSvgComponent = (props) => (
 export default function Home() {
   return (
     <div>
-      <div className='flex '>
+      <div className='bg-deep-blue'>
+        <h1 className='text-center text-white font-semibold mb-6'>
+          Become a Merchant
+        </h1>
+        <div className='bg-white w-1/3 mx-auto rounded-lg h-10 flex flex-col justify-center text-center mb-6'>
+          <p>Learn more</p>
+        </div>
+
+        <div className="w-11/12 mx-auto mb-6">
+          <Image src={analytics} alt='analytics' />
+        </div>
+
+        <div className="w-11/12 mx-auto mb-8">
+          <Image src={products} alt='products' />
+        </div>
+
+        <div className='h-3 mb-10'></div>
+      </div>
+      {/* <div className='flex '>
         <div className='w-[483px] ml-[270px] mr-80 mt-32'>
           <h1 className='text-4xl font-bold tracking-wider'>
             Buy together,
@@ -274,7 +292,7 @@ export default function Home() {
             alt='products list'
           />
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
