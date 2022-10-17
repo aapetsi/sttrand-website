@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </div>
 
-      <h1 className='text-center font-semibold mb-3'>
+      <h1 className='text-center font-semibold mb-3 text-2xl'>
         A Platform Where Consumers
         <br /> can Utilize Social Apps to buy items
         <br /> at a Discount
