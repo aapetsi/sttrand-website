@@ -17,7 +17,7 @@ import products from '../images/Screen Shot 2022-07-13 at 11.02.15 PM@2x.png'
 export default function Home() {
   return (
     <div>
-      <h1 className='text-center font-bold mb-3'>
+      <h1 className='text-center font-bold mb-3 text-4xl'>
         <span className='text-light-blue'>Buy</span> together,
         <br /> Save together
       </h1>
