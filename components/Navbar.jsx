@@ -1,13 +1,17 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import foodBasket from '../images/Asset 3@4x-8.png'
+import sttrandLogo from '../images/Asset 3@4x-8.png'
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false)
 
   return (
     <div className='flex p-12 justify-between'>
-      <span><Image src={foodBasket} width='90' height='20' alt='sttrand logo' /></span>
+      <Link href='/'>
+        <span className='hover:cursor-pointer'>
+          <Image src={sttrandLogo} width='90' height='20' alt='sttrand logo' />
+        </span>
+      </Link>
       <nav>
         <section className='MOBILE-MENU flex lg:hidden'>
           <div
@@ -38,13 +42,22 @@ const Navbar = () => {
               </svg>
             </div>
             <ul className='MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]'>
-              <li onClick={() => setIsNavOpen(false)} className='border-b border-gray-400 my-8 uppercase'>
+              <li
+                onClick={() => setIsNavOpen(false)}
+                className='border-b border-gray-400 my-8 uppercase'
+              >
                 <Link href='/'>Home</Link>
               </li>
-              <li onClick={() => setIsNavOpen(false)} className='border-b border-gray-400 my-8 uppercase'>
+              <li
+                onClick={() => setIsNavOpen(false)}
+                className='border-b border-gray-400 my-8 uppercase'
+              >
                 <Link href='/about'>About Us</Link>
               </li>
-              <li onClick={() => setIsNavOpen(false)} className='border-b border-gray-400 my-8 uppercase'>
+              <li
+                onClick={() => setIsNavOpen(false)}
+                className='border-b border-gray-400 my-8 uppercase'
+              >
                 <Link href='/how_it_works'>How it works</Link>
               </li>
             </ul>
@@ -85,6 +98,5 @@ const Navbar = () => {
     </div>
   )
 }
-
 
 export default Navbar
