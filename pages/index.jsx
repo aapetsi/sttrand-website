@@ -79,7 +79,7 @@ export default function Home() {
       </div>
 
       <div>
-        <h1 className='text-center font-bold mb-3'>
+        <h1 className='text-center font-extrabold mb-3'>
           Different Payment
           <br /> Options Accepted
         </h1>
