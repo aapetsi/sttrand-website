@@ -4,7 +4,7 @@ const PrivacyPolicy = () => {
       <div className='bg-deep-blue flex flex-col justify-center text-center h-48 mb-8'>
         <h1 className='text-white font-black'>Privacy Policy</h1>
       </div>
-      <div className='w-5/6 mx-auto text-md'>
+      <div className='w-5/6 mx-auto text-md md:w-1/2'>
         <p className='mb-3'>
           At Sttrand, accessible from https://www.sttrand.com, one of our main
           priorities is the privacy of our visitors. This Privacy Policy
