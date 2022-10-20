@@ -39,6 +39,7 @@ export default function Home() {
       <div className='mb-12'>
         <div className='bg-deep-blue rounded-full w-8 h-8 absolute top-[55%] ml-5'></div>
         <div className='bg-deep-blue ml-5 rounded-full w-[350px] h-[350px] absolute top-[60%]'></div>
+        <div className='bg-deep-blue ml-[89%] rounded-full w-8 h-8 absolute top-[90%]'></div>
         <div className='text-center'>
           <Image src={homeImage} alt='sttrand app home page' />
         </div>
