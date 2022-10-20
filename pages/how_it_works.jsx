@@ -5,11 +5,12 @@ import TruckIcon from '../components/TruckIcon'
 const Instructions = () => {
   return (
     <div className='mb-10'>
-      <div className='text-center w-2/3 mx-auto mb-6'>
-        <h1 className='font-bold text-2xl mb-3'>
+      <div className='md:flex md:p-10 md:items-center'>
+      <div className='text-center w-2/3 mx-auto mb-6 md:text-left'>
+        <h1 className='font-bold text-2xl md:text-5xl mb-3'>
           How it <span className='text-light-blue'>works</span>
         </h1>
-        <p>
+        <p className='md:text-2xl'>
           Sttrand is a platform that utilizes social media (WhatsApp, Facebook
           Messenger, SMS) which allows consumers to partner on purchasing items
           on a shopping mobile app.
@@ -25,9 +26,10 @@ const Instructions = () => {
           // height='393px'
         ></video>
       </div>
+      </div>
 
-      <div className='bg-deep-blue p-9'>
-        <div className='flex bg-white flex-col rounded-3xl p-10 mb-8'>
+      <div className='bg-deep-blue p-9 md:flex md:justify-evenly'>
+        <div className='flex bg-white flex-col rounded-3xl p-10 mb-8 md:w-3/12 md:mr-6'>
           <div className='flex justify-between mb-3'>
             <div className='flex flex-col text-center justify-center border-2 border-solid rounded-xl border-black w-28 h-16'>
               <h1 className='text-sm font-bold'>35 GHC</h1>
@@ -46,7 +48,7 @@ const Instructions = () => {
           </div>
         </div>
 
-        <div className='flex bg-white flex-col rounded-3xl p-6 mb-8'>
+        <div className='flex bg-white flex-col rounded-3xl p-6 mb-8 md:w-3/12 md:mr-6'>
           <div className='mx-auto mb-6'>
             <StopWatchIcon />
           </div>
@@ -56,7 +58,7 @@ const Instructions = () => {
           </p>
         </div>
 
-        <div className='flex bg-white flex-col rounded-3xl p-6 mb-8'>
+        <div className='flex bg-white flex-col rounded-3xl p-6 mb-8 md:w-3/12 md:mr-6'>
           <div className='mx-auto mb-6'>
             <FriendsIcon />
           </div>
@@ -68,7 +70,7 @@ const Instructions = () => {
           </p>
         </div>
 
-        <div className='flex bg-white flex-col rounded-3xl p-6 mb-8'>
+        <div className='flex bg-white flex-col rounded-3xl p-6 mb-8 md:w-3/12 '>
           <div className='mx-auto mb-6'>
             <TruckIcon />
           </div>
