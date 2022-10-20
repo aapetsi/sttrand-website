@@ -79,32 +79,34 @@ export default function Home() {
         </div>
       </div>
 
-      <div>
-        <h1 className='text-center font-extrabold mb-3'>
-          Different Payment
-          <br /> Options Accepted
-        </h1>
-        <p className='text-center text-xs mb-10'>
-          Different Delivery Options Available
-        </p>
+      <div className='md:flex md:items-center md:justify-evenly md:mt-24'>
+        <div className=''>
+          <h1 className='text-center font-extrabold mb-3 md:text-3xl md:text-left'>
+            Different Payment
+            <br /> Options Accepted
+          </h1>
+          <p className='text-center text-xs mb-10 md:text-xl md:text-left'>
+            Different Delivery Options Available
+          </p>
+        </div>
         <div className='flex justify-between p-3 mb-6'>
-          <span className='w-32'>
+          <span className='w-32 md:w-72'>
             <Image src={imageOne} alt='shopping cart items' />
           </span>
-          <span className='-mt-8 w-32'>
+          <span className='-mt-8 w-32 md:w-72 md:-mt-24'>
             <Image src={imageTwo} alt='items checkout' />
           </span>
-          <span className='w-32'>
+          <span className='w-32 md:w-72'>
             <Image src={imageThree} alt='successful order' />
           </span>
         </div>
       </div>
 
       <div className='bg-deep-blue'>
-        <h1 className='text-center text-white font-semibold mb-6 pt-4'>
+        <h1 className='text-center text-white md:text-2xl font-semibold mb-6 pt-4'>
           Become a Merchant
         </h1>
-        <div className='bg-white w-1/3 mx-auto rounded-lg h-10 flex flex-col justify-center text-center mb-6'>
+        <div className='bg-white w-1/3 md:w-1/6 mx-auto rounded-lg h-10 md:h-12 flex flex-col justify-center text-center mb-6'>
           <p>Learn more</p>
         </div>
 
@@ -118,102 +120,6 @@ export default function Home() {
 
         <div className='h-3 mb-10'></div>
       </div>
-      {/* <div className='flex '>
-        <div className='w-[483px] ml-[270px] mr-80 mt-32'>
-          <h1 className='text-4xl font-bold tracking-wider'>
-            Buy together,
-            <br /> <span className='text-light-blue'>Save</span> together
-          </h1>
-          <p className='mb-5'>
-            Realizing the power of community. Sttrand is the social commerce
-            infrastructure for the continent of Africa
-          </p>
-
-        </div>
-        <Image src={homeImage} />
-      </div>
-
-      <div className='mt-16'>
-        <h1 className='text-center tracking-wide text-3xl font-black mb-6'>
-          A Platform Where Consumers
-          <br /> can Utilize Social Apps to buy Items
-          <br /> at a Discount
-        </h1>
-        <p className='text-center tracking-wide text-xl mb-10'>
-          Consumers have the option to purchase everyday household items
-          individually at
-          <br /> a standard retail price or they can partner with a
-          family/firend or other
-          <br /> consumers on our platform to get a discounted price.
-        </p>
-        <div className='text-center mb-10'>
-          <button className='w-[200px] h-[60px] bg-deep-blue text-white rounded-lg'>
-            Get the App
-          </button>
-        </div>
-      </div>
-
-      <div className='flex justify-center content-center mb-16'>
-        <div className='mt-[250px]'>
-          <h1 className='font-bold text-3xl tracking-wider'>
-            Different
-            <br /> Payment Options
-            <br /> Accepted
-          </h1>
-          <p className='tracking-wider'>Different Delivery Options Available</p>
-        </div>
-        <div className='mr-4'>
-          <Image
-            src={imageOne}
-            width='265px'
-            height='582px'
-            alt='analytics dashboard'
-          />
-        </div>
-        <div className='mr-4'>
-          <Image
-            src={imageOne}
-            width='265px'
-            height='582px'
-            alt='analytics dashboard'
-          />
-        </div>
-        <div>
-          <Image
-            src={imageOne}
-            width='265px'
-            height='582px'
-            alt='analytics dashboard'
-          />
-        </div>
-      </div>
-
-      <div className='bg-deep-blue'>
-        <h1 className='text-center text-white pt-10 mb-6 text-4xl tracking-wider'>
-          Become a Merchant
-        </h1>
-        <div className='text-center'>
-          <button className='mx-auto rounded-lg bg-white w-[200px] h-[50px] mb-10'>
-            Learn more
-          </button>
-        </div>
-        <div className='ml-[300px] mb-10'>
-          <Image
-            src={analytics}
-            width='1320px'
-            height='800px'
-            alt='analytics dashboard'
-          />
-        </div>
-        <div className='ml-[300px] pb-24'>
-          <Image
-            src={products}
-            width='1320px'
-            height='800px'
-            alt='products list'
-          />
-        </div>
-      </div> */}
     </div>
   )
 }
