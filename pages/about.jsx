@@ -141,34 +141,36 @@ const About = () => {
         </div>
       </div>
 
-      <h1 className='font-bold text-center mb-6 md:text-3xl'>Our Purpose</h1>
+      <div className='bg-off-white p-10 mb-10'>
+        <h1 className='font-bold text-center mb-6 md:text-3xl'>Our Purpose</h1>
 
-      <div className='md:flex md:flex-row md:justify-evenly'>
-        <div className='md:w-1/4'>
-          <div className='flex justify-center mb-6'>
-            <FriendsIconSvgComponent />
+        <div className='md:flex md:flex-row md:justify-evenly'>
+          <div className='md:w-1/4'>
+            <div className='flex justify-center mb-6'>
+              <FriendsIconSvgComponent />
+            </div>
+
+            <p className='text-center p-4'>
+              Provide consumers with the best prices on everyday household items
+            </p>
           </div>
 
-          <p className='text-center p-4'>
-            Provide consumers with the best prices on everyday household items
-          </p>
-        </div>
+          {width < 500 ? (
+            <hr className='w-1/3 mx-auto border-2 border-black mb-6' />
+          ) : (
+            <span className='border-r-4 border-black h-40'></span>
+          )}
 
-        {width < 500 ? (
-          <hr className='w-1/3 mx-auto border-2 border-black mb-6' />
-        ) : (
-          <span className='border-r-4 border-black h-40'></span>
-        )}
+          <div className='md:w-1/4'>
+            <div className='flex justify-center mb-6'>
+              <CartIconSvgComponent />
+            </div>
 
-        <div className='md:w-1/4'>
-          <div className='flex justify-center mb-6'>
-            <CartIconSvgComponent />
+            <p className='text-center p-4 mb-8'>
+              Provide our Sellers access to customers they never would have sold
+              directly to through our platform
+            </p>
           </div>
-
-          <p className='text-center p-4 mb-8'>
-            Provide our Sellers access to customers they never would have sold
-            directly to through our platform
-          </p>
         </div>
       </div>
     </div>
