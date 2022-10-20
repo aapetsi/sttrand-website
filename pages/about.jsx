@@ -49,7 +49,7 @@ function CartIconSvgComponent(props) {
 
 const About = () => {
   const { height, width } = useWindowDimensions()
-  console.log(width)
+
   return (
     <div>
       <div className='md:flex md:items-center'>
