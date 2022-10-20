@@ -5,6 +5,7 @@ import whatsApp from '../images/Image 2@2x.png'
 import fbMessenger from '../images/Facebook_Messenger_logo_2020.svg@2x.png'
 import chatIcon from '../images/Icon material-chat@2x.png'
 import Path from '../components/Path'
+import useWindowDimensions from '../hooks/useWindowDimensions'
 
 function FriendsIconSvgComponent(props) {
   return (
@@ -47,52 +48,78 @@ function CartIconSvgComponent(props) {
 }
 
 const About = () => {
+  const { height, width } = useWindowDimensions()
+  console.log(width)
   return (
     <div>
-      <h1 className='font-bold text-3xl text-center mb-3'>About us</h1>
-      <p className='text-center w-2/3 mx-auto'>
-        Sttrand is a{' '}
-        <span className='text-light-blue'>social commerce marketplace</span> for
-        the continent of Africa. We know the cost of daily household goods are
-        an important concern for consumers looking to provide for themselves and
-        loved ones.
-      </p>
+      <div className='md:flex md:items-center'>
+        <div className='md:w-1/2 md:ml-20'>
+          <h1 className='font-bold text-3xl md:text-6xl md:text-left md:mx-auto md:w-2/3 text-center mb-3'>
+            About us
+          </h1>
+          <p className='text-center md:text-xl md:text-left w-2/3 mx-auto'>
+            Sttrand is a{' '}
+            <span className='text-light-blue'>social commerce marketplace</span>{' '}
+            for the continent of Africa. We know the cost of daily household
+            goods are an important concern for consumers looking to provide for
+            themselves and loved ones.
+          </p>
+        </div>
 
-      <div className='flex justify-center mb-3'>
-        <Africa width='300' height='400' />
+        <div className='flex justify-center mb-3 md:w-1/2 md:mr-20'>
+          {width < 500 ? (
+            <Africa width='300' height='400' />
+          ) : (
+            <Africa width='500' height='600' />
+          )}
+        </div>
       </div>
 
-      <p className='text-center w-2/3 mx-auto'>
-        The market shopping experience leaves consumers bargaining on goods that
-        fluctuate in price at any given time. No simplified way exists to
-        partner together using social apps with others to{' '}
-        <span className='text-light-blue'>
-          increase a consumer&apos;s purchasing power on household items
-        </span>{' '}
-        within the continent of Africa today.
-      </p>
+      <div className='md:flex md:flex-row-reverse md:items-center md:mr-20'>
+        <div>
+          <p className='text-center md:text-xl w-2/3 mx-auto md:text-left'>
+            The market shopping experience leaves consumers bargaining on goods
+            that fluctuate in price at any given time. No simplified way exists
+            to partner together using social apps with others to{' '}
+            <span className='text-light-blue'>
+              increase a consumer&apos;s purchasing power on household items
+            </span>{' '}
+            within the continent of Africa today.
+          </p>
+        </div>
 
-      <div className='flex justify-center'>
-        <Image src={foodBasket} width='' height='' alt='food basket' />
+        <div className='flex justify-center md:ml-20'>
+          {width < 500 ? (
+            <Image src={foodBasket} width='' height='' alt='food basket' />
+          ) : (
+            <Image
+              src={foodBasket}
+              width='2500'
+              height='1800'
+              alt='food basket'
+            />
+          )}
+        </div>
       </div>
 
       <div className='-mt-40 mb-6'>
-        <Path width='400' />
+        {width < 500 ? <Path width='400' /> : <Path width='1440' />}
       </div>
 
-      <h1 className='text-center w-2/3 mx-auto font-bold mb-6'>
+      <h1 className='text-center md:text-3xl md:w-7/12 w-2/3 mx-auto font-bold mb-6'>
         <span className='text-light-blue'>&ldquo;</span>Our goal is to increase
         the purchasing power of the people within the continent while creating
         disposable income for our customers
         <span className='text-light-blue'>&rdquo;</span>
       </h1>
 
-      <p className='text-center w-2/3 mx-auto font-extralight mb-10'>
-        We utilize social apps to help consumers partner together to get
-        everyday household items at great prices.
+      <p className='text-center w-2/3 md:text-2xl mx-auto font-extralight mb-10'>
+        We utilize <span className='text-light-blue'>social apps</span> to help
+        consumers partner together to get everyday household items at great
+        prices.
       </p>
 
-      <div className='flex justify-between mb-16 w-5/6 mx-auto'>
+      <div className='flex justify-between mb-16 w-5/6 mx-auto md:w-1/3'>
         <div className='text-center'>
           <Image src={whatsApp} width='50' height='50' alt='whatsapp image' />
           <p className='mt-4'>WhatsApp</p>
@@ -114,26 +141,36 @@ const About = () => {
         </div>
       </div>
 
-      <h1 className='font-bold text-center mb-6'>Our Purpose</h1>
+      <h1 className='font-bold text-center mb-6 md:text-3xl'>Our Purpose</h1>
 
-      <div className='flex justify-center mb-6'>
-        <FriendsIconSvgComponent />
+      <div className='md:flex md:flex-row md:justify-evenly'>
+        <div className='md:w-1/4'>
+          <div className='flex justify-center mb-6'>
+            <FriendsIconSvgComponent />
+          </div>
+
+          <p className='text-center p-4'>
+            Provide consumers with the best prices on everyday household items
+          </p>
+        </div>
+
+        {width < 500 ? (
+          <hr className='w-1/3 mx-auto border-2 border-black mb-6' />
+        ) : (
+          <span className='border-r-4 border-black h-40'></span>
+        )}
+
+        <div className='md:w-1/4'>
+          <div className='flex justify-center mb-6'>
+            <CartIconSvgComponent />
+          </div>
+
+          <p className='text-center p-4 mb-8'>
+            Provide our Sellers access to customers they never would have sold
+            directly to through our platform
+          </p>
+        </div>
       </div>
-
-      <p className='text-center p-4'>
-        Provide consumers with the best prices on everyday household items
-      </p>
-
-      <hr className='w-1/3 mx-auto border-2 border-black mb-6' />
-
-      <div className='flex justify-center mb-6'>
-        <CartIconSvgComponent />
-      </div>
-
-      <p className='text-center p-4 mb-8'>
-        Provide our Sellers access to customers they never would have sold
-        directly to through our platform
-      </p>
     </div>
   )
 }
