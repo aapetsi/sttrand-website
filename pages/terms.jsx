@@ -4,7 +4,7 @@ const Terms = () => {
       <div className='bg-deep-blue flex flex-col justify-center text-center h-48 mb-8'>
         <h1 className='text-white font-black'>Terms of Use</h1>
       </div>
-      <div className='w-5/6 mx-auto text-md'>
+      <div className='w-5/6 mx-auto text-md md:w-1/2'>
         <h1 className='font-semibold mb-3'>Welcome to Sttrand!</h1>
         <p className='mb-3'>
           These terms of use outline the rules and regulations for the use of

@@ -6,10 +6,10 @@ import Image from 'next/image'
 const Footer = () => {
   return (
     <div className='w-full'>
-      <div className='w-1/3 mx-auto mb-6 md:hidden'>
+      <div className='w-1/3 mx-auto mb-6'>
         <SttrandLogo />
       </div>
-      <div className='flex mb-8 justify-around md:hidden'>
+      <div className='flex mb-8 justify-around '>
         <div className='flex flex-col'>
           <h1 className='mb-4 text-xs font-black'>COMPANY</h1>
           <Link href='/about'>
