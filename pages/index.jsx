@@ -13,8 +13,12 @@ import imagex5 from '../images/imagex5.png'
 import googlePlayStore from '../images/googlePlayStore.png'
 import homeImage from '../images/Image 3.png'
 import products from '../images/Screen Shot 2022-07-13 at 11.02.15 PM@2x.png'
+import useWindowDimensions from '../hooks/useWindowDimensions'
+import UserJourneyPath from '../images/UserJourneyPath.svg'
 
 export default function Home() {
+  const { width, height } = useWindowDimensions()
+
   return (
     <div>
       <h1 className='text-center font-bold mb-3 text-4xl'>
@@ -61,23 +65,56 @@ export default function Home() {
         <p className='text-white font-black text-sm'>Get the App</p>
       </div>
 
-      <div className='flex flex-wrap justify-center'>
-        <div className='w-5/12 p-4'>
-          <Image src={imagex1} alt='' />
+      {width < 500 ? (
+        <div className='flex flex-wrap justify-center'>
+          <div className='w-5/12 p-4'>
+            <Image src={imagex1} alt='' />
+          </div>
+          <div className='w-5/12 p-4 mt-10'>
+            <Image src={imagex2} alt='' />
+          </div>
+          <div className='w-5/12 p-4 -mt-5'>
+            <Image src={imagex3} alt='' />
+          </div>
+          <div className='w-5/12 p-4 mt-5'>
+            <Image src={imagex4} alt='' />
+          </div>
+          <div className='w-5/12 p-4'>
+            <Image src={imagex5} alt='' />
+          </div>
         </div>
-        <div className='w-5/12 p-4 mt-10'>
-          <Image src={imagex2} alt='' />
+      ) : (
+        <div className=''>
+           <div className='absolute top-[210%] left-80'>
+            < Image src={UserJourneyPath} alt='user path'/>
+          </div>
+          <div className='md:flex md:flex-wrap md:justify-center md:p-28'>
+            <div className='w-4/12 p-4'>
+              <Image src={imagex1} alt='' />
+            </div>
+            <div className='w-4/12 p-4'>
+              <Image src={imagex2} alt='' />
+            </div>
+            <div className='w-4/12 p-4'>
+              <Image src={imagex3} alt='' />
+            </div>
+            <div className='w-4/12 p-4 mt-5'>
+              <Image src={imagex4} alt='' />
+            </div>
+            <div className='w-4/12 p-4'>
+              <Image src={imagex5} alt='' />
+            </div>
+            </div>
         </div>
-        <div className='w-5/12 p-4 -mt-5'>
-          <Image src={imagex3} alt='' />
-        </div>
-        <div className='w-5/12 p-4 mt-5'>
-          <Image src={imagex4} alt='' />
-        </div>
-        <div className='w-5/12 p-4'>
-          <Image src={imagex5} alt='' />
-        </div>
-      </div>
+        // <div className="flex h-96 flex-wrap justify-center p-28">
+        //   {/*  */}
+
+
+
+
+
+        // </div>
+      )}
 
       <div className='md:flex md:items-center md:justify-evenly md:mt-24'>
         <div className=''>
