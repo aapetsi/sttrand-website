@@ -73,7 +73,7 @@ const Contact = () => {
 
             <button
               type='submit'
-              className='flex ml-7 md:ml-28 text-sm px-4 py-2 leading-none bg-deep-blue border rounded-full text-white font-extralight border-white hover:border-transparent'
+              className='flex ml-7 md:ml-[8.5%] text-sm px-4 py-2 leading-none bg-deep-blue border rounded-full text-white font-extralight border-white hover:border-transparent'
             >
               Submit
             </button>
