@@ -102,8 +102,13 @@ const About = () => {
         </div>
       </div>
 
-      <div className='-mt-40 mb-6'>
-        {width < 500 ? <Path width='400' /> : <Path width='1440' />}
+      <div className='-mt-44 mb-6 md:hidden'>
+        <Path width='400' />
+
+      </div>
+
+      <div className='-mt-40 mb-6 hidden md:block'>
+        <Path width='1440' />
       </div>
 
       <h1 className='text-center md:text-3xl md:w-7/12 w-2/3 mx-auto font-bold mb-6'>
