@@ -18,7 +18,7 @@ import UserJourneyPath from '../images/UserJourneyPath.svg'
 
 export default function Home() {
   const { width, height } = useWindowDimensions()
-  console.log(width)
+
   return (
     <div>
       <div className='md:flex'>
@@ -43,14 +43,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {width > 500 && <div className='mr-52'>
-        <div className='bg-deep-blue rounded-full w-8 h-8 absolute top-[23%] left-[67%]'></div>
-        <div className='bg-deep-blue ml-5 rounded-full w-[350px] h-[350px] absolute top-[24%] left-[64%]'></div>
-        <div className='bg-deep-blue rounded-full w-8 h-8 absolute top-[70%] left-[86%]'></div>
-          <div className='text-center'>
-            <Image src={homeImage} alt='sttrand app home page' />
-          </div>
-        </div>}
       </div>
 
       <div className='mb-12 md:hidden'>
@@ -78,52 +70,46 @@ export default function Home() {
         <p className='text-white font-black text-sm'>Get the App</p>
       </div>
 
-      {width < 500 ? (
-        <div className='flex flex-wrap justify-center'>
-          <div className='w-5/12 p-4'>
+      <div className='flex flex-wrap justify-center md:hidden'>
+        <div className='w-5/12 p-4'>
+          <Image src={imagex1} alt='' />
+        </div>
+        <div className='w-5/12 p-4 mt-10'>
+          <Image src={imagex2} alt='' />
+        </div>
+        <div className='w-5/12 p-4 -mt-5'>
+          <Image src={imagex3} alt='' />
+        </div>
+        <div className='w-5/12 p-4 mt-5'>
+          <Image src={imagex4} alt='' />
+        </div>
+        <div className='w-5/12 p-4'>
+          <Image src={imagex5} alt='' />
+        </div>
+      </div>
+
+      <div className='hidden md:block'>
+        <div className='absolute top-[120%] left-80'>
+          <Image src={UserJourneyPath} alt='user path' />
+        </div>
+        <div className='md:flex md:flex-wrap md:justify-center md:p-28'>
+          <div className='w-4/12 p-4'>
             <Image src={imagex1} alt='' />
           </div>
-          <div className='w-5/12 p-4 mt-10'>
+          <div className='w-4/12 p-4'>
             <Image src={imagex2} alt='' />
           </div>
-          <div className='w-5/12 p-4 -mt-5'>
+          <div className='w-4/12 p-4'>
             <Image src={imagex3} alt='' />
           </div>
-          <div className='w-5/12 p-4 mt-5'>
+          <div className='w-4/12 p-4 mt-5'>
             <Image src={imagex4} alt='' />
           </div>
-          <div className='w-5/12 p-4'>
+          <div className='w-4/12 p-4'>
             <Image src={imagex5} alt='' />
           </div>
         </div>
-      ) : (
-        <div className=''>
-          <div className='absolute top-[210%] left-80'>
-            <Image src={UserJourneyPath} alt='user path' />
-          </div>
-          <div className='md:flex md:flex-wrap md:justify-center md:p-28'>
-            <div className='w-4/12 p-4'>
-              <Image src={imagex1} alt='' />
-            </div>
-            <div className='w-4/12 p-4'>
-              <Image src={imagex2} alt='' />
-            </div>
-            <div className='w-4/12 p-4'>
-              <Image src={imagex3} alt='' />
-            </div>
-            <div className='w-4/12 p-4 mt-5'>
-              <Image src={imagex4} alt='' />
-            </div>
-            <div className='w-4/12 p-4'>
-              <Image src={imagex5} alt='' />
-            </div>
-          </div>
-        </div>
-        // <div className="flex h-96 flex-wrap justify-center p-28">
-        //   {/*  */}
-
-        // </div>
-      )}
+      </div>
 
       <div className='md:flex md:items-center md:justify-evenly md:mt-24'>
         <div className=''>
