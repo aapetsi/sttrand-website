@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.styler {
+  border: 1px solid red;
+  background-image: url('../images/Screenshot 2022-10-22 at 04-10-05 Sttrand_v5.png');
+  background-size: stretch;
+}

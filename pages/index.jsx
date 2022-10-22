@@ -18,30 +18,43 @@ import UserJourneyPath from '../images/UserJourneyPath.svg'
 
 export default function Home() {
   const { width, height } = useWindowDimensions()
-
+  console.log(width)
   return (
     <div>
-      <h1 className='text-center font-bold mb-3 text-4xl'>
-        <span className='text-light-blue'>Buy</span> together,
-        <br /> Save together
-      </h1>
-      <p className='text-center text-sm w-2/3 mx-auto mb-6'>
-        Realizing the power of community. Sttrand is the social commerce
-        infrastructure for the continent of Africa.
-      </p>
+      <div className='md:flex'>
+        <div className='md:flex md:flex-col md:mx-24'>
+          <h1 className='text-center md:text-left font-bold mb-3 text-4xl md:text-5xl'>
+            Buy together,
+            <br />
+            <span className='text-light-blue'>Save</span> together!
+          </h1>
+          <p className='text-center md:text-left md:text-xl md:mx-0 text-sm w-2/3 md:w-1/3 mx-auto mb-6'>
+            Realizing the power of community. Sttrand is the social commerce
+            infrastructure for the continent of Africa.
+          </p>
 
-      <div className='flex justify-between w-2/3 mx-auto mb-6'>
-        <div className='w-32'>
-          <Image src={appStore} alt='apple store image' />
-        </div>
+          <div className='flex justify-between md:justify-start w-2/3 md:mx-0 mx-auto mb-6'>
+            <div className='w-32 md:mr-5'>
+              <Image src={appStore} alt='apple store image' />
+            </div>
 
-        <div className='w-32'>
-          <Image src={googlePlayStore} alt='google play store image' />
+            <div className='w-32'>
+              <Image src={googlePlayStore} alt='google play store image' />
+            </div>
+          </div>
         </div>
+        {width > 500 && <div className='mr-52'>
+        <div className='bg-deep-blue rounded-full w-8 h-8 absolute top-[23%] left-[67%]'></div>
+        <div className='bg-deep-blue ml-5 rounded-full w-[350px] h-[350px] absolute top-[24%] left-[64%]'></div>
+        <div className='bg-deep-blue rounded-full w-8 h-8 absolute top-[70%] left-[86%]'></div>
+          <div className='text-center'>
+            <Image src={homeImage} alt='sttrand app home page' />
+          </div>
+        </div>}
       </div>
 
-      <div className='mb-12'>
-        <div className='bg-deep-blue rounded-full w-8 h-8 absolute top-[55%] ml-5'></div>
+      <div className='mb-12 md:hidden'>
+        <div className='bg-deep-blue rounded-full w-8 h-8 absolute  top-[55%] ml-5'></div>
         <div className='bg-deep-blue ml-5 rounded-full w-[350px] h-[350px] absolute top-[60%]'></div>
         <div className='bg-deep-blue ml-[89%] rounded-full w-8 h-8 absolute top-[90%]'></div>
         <div className='text-center'>
@@ -85,8 +98,8 @@ export default function Home() {
         </div>
       ) : (
         <div className=''>
-           <div className='absolute top-[210%] left-80'>
-            < Image src={UserJourneyPath} alt='user path'/>
+          <div className='absolute top-[210%] left-80'>
+            <Image src={UserJourneyPath} alt='user path' />
           </div>
           <div className='md:flex md:flex-wrap md:justify-center md:p-28'>
             <div className='w-4/12 p-4'>
@@ -104,14 +117,10 @@ export default function Home() {
             <div className='w-4/12 p-4'>
               <Image src={imagex5} alt='' />
             </div>
-            </div>
+          </div>
         </div>
         // <div className="flex h-96 flex-wrap justify-center p-28">
         //   {/*  */}
-
-
-
-
 
         // </div>
       )}
